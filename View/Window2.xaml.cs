@@ -30,17 +30,18 @@ namespace WPFEmployee.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            dg2.ItemsSource = a.GetEmployees().Take<Employee>(3);
+            dg2.ItemsSource = a._emp.Take<Employee>(3);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            dg2.ItemsSource = a.GetEmployees().Skip<Employee>(a.GetEmployees().Count - 5);       
+            dg2.ItemsSource = a._emp.Skip<Employee>(a.GetEmployees().Count - 5);
+
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            dg2.ItemsSource = a._emp;
+            dg2.ItemsSource = a.GetEmployees();
         }
     }
 }

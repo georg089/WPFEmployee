@@ -27,13 +27,14 @@ namespace WPFEmployee.ViewMoled
         public ViewModelForWindow2()
         {
             _emp = Employee.GetEmployees();
-
+            _emp = new ObservableCollection<Employee>(_emp.OrderByDescending(x => x.Total));
         }
 
         public ObservableCollection<Employee> GetEmployees()
         {
-            return (_emp);
-            
+            return _emp;
+
+
         }
 
 

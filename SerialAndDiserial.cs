@@ -56,8 +56,9 @@ namespace WPFEmployee
             catch (SerializationException e)
             {
 
-                return (null);
-               
+                Console.WriteLine("Failed to serialize. Reason: " + e.Message);
+                throw;
+
             }
 
 

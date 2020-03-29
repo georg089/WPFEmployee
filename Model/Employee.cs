@@ -29,10 +29,9 @@ namespace WPFEmployee.Model
       
         public static ObservableCollection<Employee> GetEmployees()
         {
-
+         
             return _ = SerialAndDiserial.Deserialize(PATH);
         }
-        
 
         public int Time
         {
@@ -138,7 +137,7 @@ namespace WPFEmployee.Model
             }
         }
 
-        public int Total
+        public  int Total
         {
             get
             {
