@@ -1,0 +1,23 @@
+﻿<Window x:Class="WPFEmployee.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFEmployee"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="83*"/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="G" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Заполнение таблицы" RenderTransformOrigin="0.557,-1.644" Margin="0,31,260,248" Click="Button_Click" Grid.Column="1" HorizontalAlignment="Right" Width="268" />
+            <Button Content="Предстваление таблицы" Width="266" HorizontalAlignment="Right" RenderTransformOrigin="0.557,-1.644" Margin="0,250,263,42" Click="Button_Click_2" Grid.Column="1"/>
+        </Grid>
+    </Grid>
+</Window>

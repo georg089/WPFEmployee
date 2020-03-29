@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPFEmployee.View.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFEmployee.View"
+        mc:Ignorable="d"
+        Title="Window2" Height="450" Width="800">
+    <Grid>
+        <Button Content="3 Max" Width="148" HorizontalAlignment="Center" RenderTransformOrigin="0.557,-1.644" Margin="13,8,632.333,339.667" Click="Button_Click" />
+        <Button Content="5 Min" Width="148" HorizontalAlignment="Center" RenderTransformOrigin="0.557,-1.644" Margin="182,9,463.333,338.667" Click="Button_Click_1" />
+        <Button Content="Вернуть" Width="148" HorizontalAlignment="Center" RenderTransformOrigin="0.557,-1.644" Margin="477,11,168.333,336.667" Click="Button_Click_2" />
+        <DataGrid x:Name="dg2" Margin="0,90,0.333,-0.333" AutoGenerateColumns="False" ItemsSource="{Binding Path = SelectedEmployee, Mode=OneWay}" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path= Fio}" Header="ФИО" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path= Position}" Header="Должность" Width="Auto" IsReadOnly="True"/>
+                <DataGridCheckBoxColumn Binding="{Binding Path= Fixed}" Header="Фик-ая оплата" Width="Auto"  IsReadOnly="True" />
+                <DataGridCheckBoxColumn Binding="{Binding Path= NFixed}" Header="Часовая оплата" Width="Auto"  IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path= Rate}" Header="Ставка" Width="auto"  IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path= Time}" Header="Кол-во отработанных часов (для час. оплаты)" Width="Auto"  IsReadOnly="True"/>
+                <DataGridTextColumn x:Name="dgtcT" Binding="{Binding Path= Total}" Header="Итог" Width="*"  IsReadOnly="True" />
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+    </Grid>
+</Window>
