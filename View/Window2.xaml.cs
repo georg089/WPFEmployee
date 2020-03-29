@@ -41,7 +41,7 @@ namespace WPFEmployee.View
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            dg2.ItemsSource = a.GetEmployees();
+            dg2.ItemsSource = a._emp;
         }
     }
 }

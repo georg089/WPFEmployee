@@ -33,14 +33,8 @@ namespace WPFEmployee.ViewMoled
         public ObservableCollection<Employee> GetEmployees()
         {
             return _emp;
-
-
         }
 
-
-        public ObservableCollection<Employee> ButtonClick1()
-        {
-           return null;
-        }
+       
     }
 }
